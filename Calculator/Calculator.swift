@@ -19,7 +19,8 @@ class Calculator {
     
     // MARK: Method(s) a.k.a. Function(s)
     func addToNewValue(digit : String) {
-        providedValue = providedValue.appending(digit)
+
+        providedValue =  providedValue + digit
     }
     
     /**
@@ -121,5 +122,7 @@ class Calculator {
         providedValue = ""
         computedValue = nil
     }
-    
+    func plusminus(){
+        
+    }
 }
