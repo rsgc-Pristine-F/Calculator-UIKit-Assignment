@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Clear contents of label
+        LabelDiplay.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,8 +61,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enterpressed(_ sender: Any) {
-        model.addToNewValue(digit: "=")
-        LabelDiplay.text = model.providedValue
+        model.equals()
+        LabelDiplay.text = "="
     }
     
     @IBAction func fourpressed(_ sender: Any) {
@@ -105,12 +108,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusminuspressed(_ sender: Any) {
-        model.plusminus()
-        LabelDiplay.text = model.providedValue
+        model.addToNewValue(digit: "±")
+        LabelDiplay.text = "±"
     }
     
     @IBAction func multiplication(_ sender: Any) {
         model.multiply()
         LabelDiplay.text = "x"
+    }
+    
+    @IBAction func Divisionpressed(_ sender: Any) {
+        model.divide()
+        LabelDiplay.text = "÷"
+    }
+    
+    @IBAction func percentpressed(_ sender: Any) {
+        model.addToNewValue(digit: "%")
+        LabelDiplay.text = "%"
     }
 }

@@ -121,8 +121,46 @@ class Calculator {
         operation = nil
         providedValue = ""
         computedValue = nil
-    }
-    func plusminus(){
         
+        //Percentage function
+        func percentage() {
+            operation = Operation.percentage
+            updateState()
+        }
+        //Addition function
+        func addition() {
+            operation = Operation.addition
+            updateState()
+        }
+        //sunbract funtion
+        func subtraction() {
+            operation = Operation.subtraction
+            updateState()
+        }
+        //multiply function
+        func multiply() {
+            operation = Operation.multiplication
+            updateState()
+        }
+        //division function
+        func divide() {
+            operation = Operation.division
+            updateState()
+        }
+        //making plus minus function
+        //this one makes toggling the button turn into a negative number as you are multiplying by -1
+        func plusminus() {
+            if providedValue == "" {
+                if var fp = computedValue{
+                    fp = fp * -1
+                    providedValue = labelDisplay
+                }
+            }
+        }
     }
-}
+    
+                
+            }
+            
+        
+       

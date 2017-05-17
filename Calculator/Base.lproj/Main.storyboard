@@ -65,7 +65,7 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="percentpressec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2g-9n-apC"/>
+                                                    <action selector="percentpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUR-KE-drF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41c-Ry-e0s">
@@ -76,7 +76,7 @@
                                                     <color key="titleColor" red="0.99473684210000002" green="0.98947368420000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="divisionpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vB2-jz-dHh"/>
+                                                    <action selector="Divisionpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8c-QW-Scv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -283,7 +283,6 @@
                     </view>
                     <connections>
                         <outlet property="LabelDiplay" destination="4u0-Z4-7Cz" id="qej-Yd-p8w"/>
-                        <outlet property="divisionpressed" destination="41c-Ry-e0s" id="U5m-d5-dVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
