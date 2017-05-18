@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pluspressed(_ sender: Any) {
-        model.addToNewValue(digit: "+")
+        model.addition()
         LabelDiplay.text = model.providedValue
     }
     
@@ -62,7 +62,10 @@ class ViewController: UIViewController {
     
     @IBAction func enterpressed(_ sender: Any) {
         model.equals()
-        LabelDiplay.text = "="
+        if model.computedValue != nil {
+        LabelDiplay.text = String(describing: model.computedValue!)
+        LabelDiplay.text = String(format: "%g", model.computedValue!)
+    }
     }
     
     @IBAction func fourpressed(_ sender: Any) {
@@ -82,7 +85,7 @@ class ViewController: UIViewController {
 
  
     @IBAction func minuspressed(_ sender: Any) {
-        model.addToNewValue(digit: "-")
+        model.subtraction()
         LabelDiplay.text = model.providedValue
     }
     
@@ -108,8 +111,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusminuspressed(_ sender: Any) {
-        model.addToNewValue(digit: "±")
-        LabelDiplay.text = "±"
+       model.plusminus()
+        LabelDiplay.text = model.providedValue
     }
     
     @IBAction func multiplication(_ sender: Any) {
@@ -123,7 +126,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentpressed(_ sender: Any) {
-        model.addToNewValue(digit: "%")
+        model.percentage()
         LabelDiplay.text = "%"
     }
 }

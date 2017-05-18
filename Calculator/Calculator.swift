@@ -94,8 +94,12 @@ class Calculator {
             computedValue = computedValue! * Double(providedValue)!
         } else if operation == Operation.division {
             computedValue = computedValue! / Double(providedValue)!
+        } else if operation == Operation.addition {
+            computedValue = computedValue! + Double(providedValue)!
+        } else if operation == Operation.subtraction {
+        computedValue = computedValue! - Double(providedValue)!
         }
-        
+    
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
         operation = nil
@@ -121,11 +125,12 @@ class Calculator {
         operation = nil
         providedValue = ""
         computedValue = nil
-        
+    }
         //Percentage function
         func percentage() {
             operation = Operation.percentage
             updateState()
+            equals()
         }
         //Addition function
         func addition() {
@@ -137,30 +142,21 @@ class Calculator {
             operation = Operation.subtraction
             updateState()
         }
-        //multiply function
-        func multiply() {
-            operation = Operation.multiplication
-            updateState()
+       func plusminus() {
+        if providedValue == "" {
+            if var meme = computedValue {
+            meme = meme * -1
+        
         }
-        //division function
-        func divide() {
-            operation = Operation.division
-            updateState()
-        }
-        //making plus minus function
-        //this one makes toggling the button turn into a negative number as you are multiplying by -1
-        func plusminus() {
-            if providedValue == "" {
-                if var fp = computedValue{
-                    fp = fp * -1
-                    providedValue = labelDisplay
-                }
-            }
-        }
+    } else {
+    if var meme = Double(providedValue){
+    meme = meme * -1
+    providedValue = String(format: "%g", meme)
+    }
+    }
     }
     
-                
+        //making plus minus function
+        //this one makes toggling the button turn into a negative number as you are multiplying by -1
+    
             }
-            
-        
-       
