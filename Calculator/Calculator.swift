@@ -98,6 +98,8 @@ class Calculator {
             computedValue = computedValue! + Double(providedValue)!
         } else if operation == Operation.subtraction {
         computedValue = computedValue! - Double(providedValue)!
+        } else if operation == Operation.percentage {
+            computedValue = computedValue! * 0.01
         }
     
         // The operation selected has been performed, so get ready to receive new operation
@@ -131,6 +133,7 @@ class Calculator {
             operation = Operation.percentage
             updateState()
             equals()
+        
         }
         //Addition function
         func addition() {
@@ -155,6 +158,7 @@ class Calculator {
     }
     }
     }
+ 
     
         //making plus minus function
         //this one makes toggling the button turn into a negative number as you are multiplying by -1

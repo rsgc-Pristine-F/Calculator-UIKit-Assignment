@@ -127,6 +127,6 @@ class ViewController: UIViewController {
     
     @IBAction func percentpressed(_ sender: Any) {
         model.percentage()
-        LabelDiplay.text = "%"
+         LabelDiplay.text = String(model.computedValue!)
     }
 }
