@@ -117,12 +117,10 @@ class ViewController: UIViewController {
     
     @IBAction func multiplication(_ sender: Any) {
         model.multiply()
-        LabelDiplay.text = "x"
     }
     
     @IBAction func Divisionpressed(_ sender: Any) {
         model.divide()
-        LabelDiplay.text = "÷"
     }
     
     @IBAction func percentpressed(_ sender: Any) {
